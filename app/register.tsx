@@ -31,9 +31,9 @@ export default function Index() {
       </View>
 
       <View>
-        <TextInput
+        <TextInput 
           style={styles.input}
-          placeholder="Nome"
+          placeholder="Nome" 
           placeholderTextColor="#A1A2A1"
         />
         <TextInput
@@ -64,7 +64,7 @@ export default function Index() {
             />
           </TouchableOpacity>
         </View>
-              <TouchableOpacity onPress={() => router.push("/home")}
+              <TouchableOpacity onPress={() => router.push("/principal/home")}
               style={styles.btn}>
                 <Text style={styles.registrar}>Registrar</Text>
               </TouchableOpacity>

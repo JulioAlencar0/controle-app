@@ -52,7 +52,7 @@ export default function Index() {
             />
           </TouchableOpacity>
         </View>
-              <TouchableOpacity onPress={() => router.push("/home")}
+              <TouchableOpacity onPress={() => router.push("/principal/home")}
               style={styles.btn}>
                 <Text style={styles.entrar}>Entrar</Text>
               </TouchableOpacity>
