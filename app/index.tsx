@@ -132,14 +132,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 8,
-    top: 40
+    marginTop: 70
   },
   entrar:{
     color: "#ffffff",
     fontWeight: 700
   },
   register:{
-    top: 55,
+    marginTop: 32,
     justifyContent: "center",
     alignSelf: "center"
   }

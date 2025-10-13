@@ -8,11 +8,15 @@ import TransactionList from "./components/TransactionList";
 export default function Home() {
   const [selected, setSelected] = useState(""); 
 
+  const monthFullNames: { [key: string]: string } = {
+    Jan: "JANEIRO",Fev: "FEVEREIRO",Mar: "MARÇO",Abr: "ABRIL",Mai: "MAIO",Jun: "JUNHO",Jul: "JULHO",Ago: "AGOSTO",Set: "SETEMBRO",Out: "OUTUBRO",Nov: "NOVEMBRO",Dez: "DEZEMBRO",
+  };
+
   useEffect(() => {
     const monthIndex = new Date().getMonth(); 
     const months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
     setSelected(months[monthIndex]);
-  }, []); // executa só uma vez, quando o componente monta
+  }, []);
 
   return (
     <ScrollView style={styles.container}>
@@ -21,7 +25,13 @@ export default function Home() {
       {selected !== "" && (
         <>
           <MonthSelector selected={selected} onChange={setSelected} />
-          <Card name={selected} year={2025} limit={2000} used={450} budget={1550} />
+          <Card
+            name={monthFullNames[selected]} //nome maiúsculo
+            year={2025}
+            limit={2000}
+            used={450}
+            budget={1550}
+          />
           <TransactionList />
         </>
       )}
